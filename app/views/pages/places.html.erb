@@ -1,2 +1,13 @@
-<h1>Pages#places</h1>
-<p>Find me in app/views/pages/places.html.erb</p>
+<h3 class="pt-5"> Walkthrough </h3>
+<div class="pl-2 py-5">  
+  <%- @places.in_groups_of(2, false).each do |places| %>
+    <div class="row">
+      <%- places.each do |place| %>
+        <div class="col-md-6 vr-box">
+          <%= place.content.html_safe %>
+        </div>
+      <% end%>
+      </div>
+  <% end %>
+</div>
+

@@ -1,2 +1,22 @@
-<h1>Pages#items</h1>
-<p>Find me in app/views/pages/items.html.erb</p>
+<h3 class="pt-5"> View in 3D </h3>
+
+<div class="pl-2 py-5">  
+  <%- @items.in_groups_of(2, false).each do |items| %>
+    <div class="row">
+      <%- items.each do |item| %>
+        <div class="col-md-6 vr-box">
+          <%= item.content.html_safe %>
+          <div class="row">
+            <div class="col-md-8">
+              <p><%= item.name %></p>
+            </div>
+            <div class="col-md-4">
+              <%= link_to item.organization.name, item.organization %>
+            </div>
+            </div>
+        </div>
+      <% end%>
+      </div>
+  <% end %>
+</div>
+
