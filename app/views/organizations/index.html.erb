@@ -1,0 +1,6 @@
+<%- @organizations.in_groups_of(3, false).each do |organizations| %>
+  <div class="row px-2">
+    <%= render organizations %>
+<% end %>
+</div>
+
