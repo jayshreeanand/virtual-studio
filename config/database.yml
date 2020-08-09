@@ -15,18 +15,18 @@ secured: &secured
 
 development:
   <<: *default
-  database: digitize_development
+  database: virtual_studio_development
 
 test:
   <<: *default
-  database: digitize_test
+  database: virtual_studio_test
 
 staging:
   <<: *default
   <<: *secured
-  database: digitize_staging
+  database: virtual_studio_staging
 
 production:
   <<: *default
   <<: *secured
-  database: digitize_production
+  database: virtual_studio_production
