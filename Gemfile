@@ -11,6 +11,7 @@ gem 'foreman'
 gem 'devise'
 gem 'activeadmin'
 gem 'auth0'
+gem 'omniauth-auth0', '~> 2.2'
 
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
