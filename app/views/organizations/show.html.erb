@@ -4,33 +4,17 @@
   <%= @organization.name %>
 </h3>
 <p>
-  <%= @organization.kind %>
-</p>
-
-<p>
   <%= @organization.description %>
 </p>
 
 
 <div id="map"></div>
 
-<h3 class="pt-5"> Walkthrough this space </h3>
-
-<div class="pl-2 py-5">  
-  <%- @organization.places.in_groups_of(2, false).each do |places| %>
-    <div class="row">
-      <%- places.each do |place| %>
-        <div class="col-md-6 vr-box">
-          <%= place.content.html_safe %>
-        </div>
-      <% end%>
-      </div>
-  <% end %>
-</div>
 
 
 
-<h3> Explore </h3>
+
+<h3 class="py-5"> Explore </h3>
 <div class="pl-2 py-5">  
   <%- @organization.items.in_groups_of(2, false).each do |items| %>
     <div class="row">
